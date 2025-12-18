@@ -1,0 +1,20 @@
+{
+    "name": "client-side-shopping-system",
+    "version": "1.0.0",
+    "description": "A lightweight WebView shopping system with a Node.js backend for keep-alive and purchase simulation.",
+    "private": true,
+    "author": "Lam Ching Hei (22087632d)",
+    "license": "MIT",
+    "type": "commonjs",
+    "engines": {
+      "node": ">=18"
+    },
+    "scripts": {
+      "start": "node server.js",
+      "dev": "NODE_ENV=development node server.js"
+    },
+    "dependencies": {
+      "cors": "^2.8.5",
+      "express": "^4.21.1"
+    }
+  }

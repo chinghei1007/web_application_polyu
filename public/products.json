@@ -1,0 +1,752 @@
+[
+  {
+    "id": "p-1001",
+    "name": "Minimalist Ceramic Mug",
+    "type": "Kitchen",
+    "basePrice": 14.99,
+    "currency": "USD",
+    "stock": 24,
+    "image": "https://picsum.photos/seed/mug/600/400",
+    "description": "A modern ceramic mug with a matte finish and ergonomic handle."
+  },
+  {
+    "id": "p-1002",
+    "name": "Wireless Mouse",
+    "type": "Electronics",
+    "basePrice": 29.99,
+    "currency": "USD",
+    "stock": 18,
+    "image": "https://picsum.photos/seed/mouse/600/400",
+    "description": "Low-latency wireless mouse with silent click and adjustable DPI."
+  },
+  {
+    "id": "p-1003",
+    "name": "Cotton T-Shirt",
+    "type": "Apparel",
+    "basePrice": 19.99,
+    "currency": "USD",
+    "stock": 50,
+    "image": "https://picsum.photos/seed/shirt/600/400",
+    "description": "Soft, breathable cotton t-shirt available in multiple colors."
+  },
+  {
+    "id": "p-1004",
+    "name": "Desk Plant",
+    "type": "Home",
+    "basePrice": 12.5,
+    "currency": "USD",
+    "stock": 40,
+    "image": "https://picsum.photos/seed/plant/600/400",
+    "description": "Low-maintenance desk plant to brighten your workspace."
+  },
+  {
+    "id": "p-1005",
+    "name": "Bluetooth Speaker",
+    "type": "Electronics",
+    "basePrice": 49.99,
+    "currency": "USD",
+    "stock": 12,
+    "image": "https://picsum.photos/seed/speaker/600/400",
+    "description": "Compact speaker with deep bass and 12 hours of battery life."
+  },
+  {
+    "id": "p-1006",
+    "name": "Stainless Steel Water Bottle",
+    "type": "Outdoors",
+    "basePrice": 21.99,
+    "currency": "USD",
+    "stock": 32,
+    "image": "https://picsum.photos/seed/bottle/600/400",
+    "description": "Double-wall insulated bottle keeps drinks cold for 24 hours."
+  },
+  {
+    "id": "p-1007",
+    "name": "Yoga Mat",
+    "type": "Fitness",
+    "basePrice": 34.5,
+    "currency": "USD",
+    "stock": 15,
+    "image": "https://picsum.photos/seed/yogamat/600/400",
+    "description": "Eco-friendly yoga mat with non-slip texture and extra cushioning."
+  },
+  {
+    "id": "p-1008",
+    "name": "Classic Backpack",
+    "type": "Apparel",
+    "basePrice": 44.0,
+    "currency": "USD",
+    "stock": 28,
+    "image": "https://picsum.photos/seed/backpack/600/400",
+    "description": "Durable canvas backpack for everyday use."
+  },
+  {
+    "id": "p-1009",
+    "name": "LED Desk Lamp",
+    "type": "Home",
+    "basePrice": 27.99,
+    "currency": "USD",
+    "stock": 20,
+    "image": "https://picsum.photos/seed/desk-lamp/600/400",
+    "description": "Adjustable LED lamp with touch controls and USB charging port."
+  },
+  {
+    "id": "p-1010",
+    "name": "Portable Power Bank",
+    "type": "Electronics",
+    "basePrice": 22.5,
+    "currency": "USD",
+    "stock": 37,
+    "image": "https://picsum.photos/seed/powerbank/600/400",
+    "description": "10,000mAh portable charger with fast charging support."
+  },
+  {
+    "id": "p-1011",
+    "name": "Enamel Pin Set",
+    "type": "Accessories",
+    "basePrice": 8.75,
+    "currency": "USD",
+    "stock": 60,
+    "image": "https://picsum.photos/seed/pins/600/400",
+    "description": "Pack of 5 quirky enamel pins to decorate bags or jackets."
+  },
+  {
+    "id": "p-1012",
+    "name": "Scented Candle",
+    "type": "Home",
+    "basePrice": 15.5,
+    "currency": "USD",
+    "stock": 45,
+    "image": "https://picsum.photos/seed/candle/600/400",
+    "description": "Hand-poured soy candle with lavender and vanilla scent."
+  },
+  {
+    "id": "p-1013",
+    "name": "Notebook Set",
+    "type": "Stationery",
+    "basePrice": 11.99,
+    "currency": "USD",
+    "stock": 34,
+    "image": "https://picsum.photos/seed/notebook/600/400",
+    "description": "Set of three A5 dotted notebooks for journaling or notes."
+  },
+  {
+    "id": "p-1014",
+    "name": "Wireless Earbuds",
+    "type": "Electronics",
+    "basePrice": 59.99,
+    "currency": "USD",
+    "stock": 10,
+    "image": "https://picsum.photos/seed/earbuds/600/400",
+    "description": "Noise-cancelling true wireless earbuds with charging case."
+  },
+  {
+    "id": "p-1015",
+    "name": "Organic Cotton Socks",
+    "type": "Apparel",
+    "basePrice": 9.99,
+    "currency": "USD",
+    "stock": 70,
+    "image": "https://picsum.photos/seed/socks/600/400",
+    "description": "Pack of 3 pairs of soft, organic cotton socks."
+  },
+  {
+    "id": "p-1016",
+    "name": "Travel Umbrella",
+    "type": "Outdoors",
+    "basePrice": 16.0,
+    "currency": "USD",
+    "stock": 22,
+    "image": "https://picsum.photos/seed/umbrella/600/400",
+    "description": "Windproof, compact travel umbrella with automatic open/close."
+  },
+  {
+    "id": "p-1017",
+    "name": "Insulated Lunch Box",
+    "type": "Kitchen",
+    "basePrice": 26.99,
+    "currency": "USD",
+    "stock": 18,
+    "image": "https://picsum.photos/seed/lunchbox/600/400",
+    "description": "Bento-style insulated lunch box with leakproof compartments."
+  },
+  {
+    "id": "p-1018",
+    "name": "Ceramic Vase",
+    "type": "Home",
+    "basePrice": 24.99,
+    "currency": "USD",
+    "stock": 16,
+    "image": "https://picsum.photos/seed/vase/600/400",
+    "description": "Minimalist ceramic vase for fresh or dried flowers."
+  },
+  {
+    "id": "p-1019",
+    "name": "Fitness Tracker",
+    "type": "Electronics",
+    "basePrice": 39.99,
+    "currency": "USD",
+    "stock": 25,
+    "image": "https://picsum.photos/seed/fittrack/600/400",
+    "description": "Water-resistant fitness tracker with heart rate monitor."
+  },
+  {
+    "id": "p-1020",
+    "name": "Portable Hammock",
+    "type": "Outdoors",
+    "basePrice": 34.99,
+    "currency": "USD",
+    "stock": 14,
+    "image": "https://picsum.photos/seed/hammock/600/400",
+    "description": "Lightweight, easy-to-pack hammock for outdoor adventures."
+  },
+  {
+    "id": "p-1021",
+    "name": "Thermal Travel Mug",
+    "type": "Kitchen",
+    "basePrice": 18.5,
+    "currency": "USD",
+    "stock": 30,
+    "image": "https://picsum.photos/seed/travelmug/600/400",
+    "description": "Spill-proof thermal mug keeps drinks hot for hours."
+  },
+  {
+    "id": "p-1022",
+    "name": "Art Print Poster",
+    "type": "Home",
+    "basePrice": 13.75,
+    "currency": "USD",
+    "stock": 41,
+    "image": "https://picsum.photos/seed/artposter/600/400",
+    "description": "High-quality art print poster for wall decor."
+  },
+  {
+    "id": "p-1023",
+    "name": "Leather Wallet",
+    "type": "Accessories",
+    "basePrice": 29.5,
+    "currency": "USD",
+    "stock": 19,
+    "image": "https://picsum.photos/seed/wallet/600/400",
+    "description": "Classic bifold wallet made from genuine leather."
+  },
+  {
+    "id": "p-1024",
+    "name": "Wireless Charger",
+    "type": "Electronics",
+    "basePrice": 17.99,
+    "currency": "USD",
+    "stock": 27,
+    "image": "https://picsum.photos/seed/charger/600/400",
+    "description": "Qi-certified fast wireless charging pad."
+  },
+  {
+    "id": "p-1025",
+    "name": "Reusable Shopping Bag",
+    "type": "Outdoors",
+    "basePrice": 7.25,
+    "currency": "USD",
+    "stock": 80,
+    "image": "https://picsum.photos/seed/shoppingbag/600/400",
+    "description": "Foldable, reusable shopping bag made from recycled materials."
+  },
+  {
+    "id": "p-1026",
+    "name": "Bamboo Toothbrush",
+    "type": "Personal Care",
+    "basePrice": 3.99,
+    "currency": "USD",
+    "stock": 120,
+    "image": "https://picsum.photos/seed/bamboo-toothbrush/600/400",
+    "description": "Eco-friendly bamboo toothbrush with soft bristles."
+  },
+  {
+    "id": "p-1027",
+    "name": "Laptop Sleeve",
+    "type": "Accessories",
+    "basePrice": 23.99,
+    "currency": "USD",
+    "stock": 36,
+    "image": "https://picsum.photos/seed/laptop-sleeve/600/400",
+    "description": "Padded laptop sleeve suitable for 13-15 inch devices."
+  },
+  {
+    "id": "p-1028",
+    "name": "French Press Coffee Maker",
+    "type": "Kitchen",
+    "basePrice": 31.5,
+    "currency": "USD",
+    "stock": 28,
+    "image": "https://picsum.photos/seed/french-press/600/400",
+    "description": "Stainless steel French press for rich, full-bodied coffee."
+  },
+  {
+    "id": "p-1029",
+    "name": "Silicone Baking Mat",
+    "type": "Kitchen",
+    "basePrice": 13.25,
+    "currency": "USD",
+    "stock": 40,
+    "image": "https://picsum.photos/seed/baking-mat/600/400",
+    "description": "Reusable non-stick silicone mat for easy baking."
+  },
+  {
+    "id": "p-1030",
+    "name": "Magnetic Phone Mount",
+    "type": "Electronics",
+    "basePrice": 14.99,
+    "currency": "USD",
+    "stock": 46,
+    "image": "https://picsum.photos/seed/phone-mount/600/400",
+    "description": "Universal magnetic car mount compatible with all smartphones."
+  },
+  {
+    "id": "p-1031",
+    "name": "Memory Foam Pillow",
+    "type": "Home",
+    "basePrice": 27.75,
+    "currency": "USD",
+    "stock": 21,
+    "image": "https://picsum.photos/seed/memory-pillow/600/400",
+    "description": "Ergonomic pillow for improved neck and spine support."
+  },
+  {
+    "id": "p-1032",
+    "name": "Electric Kettle",
+    "type": "Kitchen",
+    "basePrice": 39.95,
+    "currency": "USD",
+    "stock": 19,
+    "image": "https://picsum.photos/seed/electric-kettle/600/400",
+    "description": "1.7L cordless electric kettle with auto shut-off."
+  },
+  {
+    "id": "p-1033",
+    "name": "Wool Beanie",
+    "type": "Apparel",
+    "basePrice": 16.99,
+    "currency": "USD",
+    "stock": 44,
+    "image": "https://picsum.photos/seed/wool-beanie/600/400",
+    "description": "Warm, soft wool beanie for chilly weather."
+  },
+  {
+    "id": "p-1034",
+    "name": "Adjustable Jump Rope",
+    "type": "Fitness",
+    "basePrice": 11.49,
+    "currency": "USD",
+    "stock": 63,
+    "image": "https://picsum.photos/seed/jump-rope/600/400",
+    "description": "Tangle-free adjustable jump rope for cardio workouts."
+  },
+  {
+    "id": "p-1035",
+    "name": "Canvas Art Tote",
+    "type": "Accessories",
+    "basePrice": 18.5,
+    "currency": "USD",
+    "stock": 55,
+    "image": "https://picsum.photos/seed/art-tote/600/400",
+    "description": "Sturdy canvas tote bag featuring original artwork."
+  },
+  {
+    "id": "p-1036",
+    "name": "Smart Light Bulb",
+    "type": "Electronics",
+    "basePrice": 15.99,
+    "currency": "USD",
+    "stock": 33,
+    "image": "https://picsum.photos/seed/smart-bulb/600/400",
+    "description": "WiFi-enabled smart bulb, works with Alexa and Google Home."
+  },
+  {
+    "id": "p-1037",
+    "name": "Aromatherapy Diffuser",
+    "type": "Home",
+    "basePrice": 29.99,
+    "currency": "USD",
+    "stock": 27,
+    "image": "https://picsum.photos/seed/diffuser/600/400",
+    "description": "Ultrasonic aromatherapy diffuser with color-changing lights."
+  },
+  {
+    "id": "p-1038",
+    "name": "Windbreaker Jacket",
+    "type": "Apparel",
+    "basePrice": 42.0,
+    "currency": "USD",
+    "stock": 17,
+    "image": "https://picsum.photos/seed/windbreaker/600/400",
+    "description": "Lightweight windbreaker jacket for outdoor activities."
+  },
+  {
+    "id": "p-1039",
+    "name": "Glass Food Containers",
+    "type": "Kitchen",
+    "basePrice": 22.99,
+    "currency": "USD",
+    "stock": 31,
+    "image": "https://picsum.photos/seed/food-containers/600/400",
+    "description": "Set of 3 glass containers with airtight bamboo lids."
+  },
+  {
+    "id": "p-1040",
+    "name": "Reflective Dog Leash",
+    "type": "Pet",
+    "basePrice": 13.5,
+    "currency": "USD",
+    "stock": 39,
+    "image": "https://picsum.photos/seed/dog-leash/600/400",
+    "description": "Durable leash with reflective stitching for night walks."
+  },
+  {
+    "id": "p-1041",
+    "name": "Wireless Charging Mouse Pad",
+    "type": "Electronics",
+    "basePrice": 21.99,
+    "currency": "USD",
+    "stock": 15,
+    "image": "https://picsum.photos/seed/charging-mousepad/600/400",
+    "description": "Mouse pad with built-in 10W wireless charger."
+  },
+  {
+    "id": "p-1042",
+    "name": "Kids' Coloring Book",
+    "type": "Stationery",
+    "basePrice": 7.99,
+    "currency": "USD",
+    "stock": 60,
+    "image": "https://picsum.photos/seed/coloring-book/600/400",
+    "description": "Fun animal-themed coloring book for kids ages 3+."
+  },
+  {
+    "id": "p-1043",
+    "name": "Copper Measuring Spoons",
+    "type": "Kitchen",
+    "basePrice": 8.75,
+    "currency": "USD",
+    "stock": 42,
+    "image": "https://picsum.photos/seed/measuring-spoons/600/400",
+    "description": "Set of 5 copper measuring spoons for baking enthusiasts."
+  },
+  {
+    "id": "p-1044",
+    "name": "Travel Neck Pillow",
+    "type": "Outdoors",
+    "basePrice": 14.49,
+    "currency": "USD",
+    "stock": 25,
+    "image": "https://picsum.photos/seed/neck-pillow/600/400",
+    "description": "Memory foam neck pillow for comfortable travel."
+  },
+  {
+    "id": "p-1045",
+    "name": "Desk Organizer Tray",
+    "type": "Home",
+    "basePrice": 12.99,
+    "currency": "USD",
+    "stock": 37,
+    "image": "https://picsum.photos/seed/desk-organizer/600/400",
+    "description": "Multi-compartment tray to keep your desk tidy."
+  },
+  {
+    "id": "p-1046",
+    "name": "Handmade Soap Bar",
+    "type": "Personal Care",
+    "basePrice": 6.5,
+    "currency": "USD",
+    "stock": 55,
+    "image": "https://picsum.photos/seed/soap-bar/600/400",
+    "description": "Handcrafted soap bar with natural essential oils."
+  },
+  {
+    "id": "p-1047",
+    "name": "Plant Mister",
+    "type": "Home",
+    "basePrice": 10.25,
+    "currency": "USD",
+    "stock": 43,
+    "image": "https://picsum.photos/seed/plant-mister/600/400",
+    "description": "Glass plant mister for gentle watering and humidity."
+  },
+  {
+    "id": "p-1048",
+    "name": "Stainless Steel Lunchbox",
+    "type": "Kitchen",
+    "basePrice": 25.0,
+    "currency": "USD",
+    "stock": 24,
+    "image": "https://picsum.photos/seed/steel-lunchbox/600/400",
+    "description": "Durable lunchbox with 3 compartments for easy meal prep."
+  },
+  {
+    "id": "p-1049",
+    "name": "Wireless Presentation Remote",
+    "type": "Electronics",
+    "basePrice": 19.99,
+    "currency": "USD",
+    "stock": 14,
+    "image": "https://picsum.photos/seed/presenter-remote/600/400",
+    "description": "Remote control for presentations with laser pointer."
+  },
+  {
+    "id": "p-1050",
+    "name": "Enamel Camping Mug",
+    "type": "Outdoors",
+    "basePrice": 9.99,
+    "currency": "USD",
+    "stock": 38,
+    "image": "https://picsum.photos/seed/camping-mug/600/400",
+    "description": "Lightweight and durable enamel mug for camping or hiking."
+  },
+  {
+    "id": "p-1051",
+    "name": "Digital Kitchen Scale",
+    "type": "Kitchen",
+    "basePrice": 18.5,
+    "currency": "EUR",
+    "stock": 21,
+    "image": "https://picsum.photos/seed/kitchen-scale/600/400",
+    "description": "High-precision kitchen scale with easy-to-read display."
+  },
+  {
+    "id": "p-1052",
+    "name": "Foldable Picnic Blanket",
+    "type": "Outdoors",
+    "basePrice": 149,
+    "currency": "HKD",
+    "stock": 44,
+    "image": "https://picsum.photos/seed/picnic-blanket/600/400",
+    "description": "Waterproof foldable blanket ideal for outdoor activities."
+  },
+  {
+    "id": "p-1053",
+    "name": "Bluetooth Sleep Headphones",
+    "type": "Electronics",
+    "basePrice": 198,
+    "currency": "RMB",
+    "stock": 18,
+    "image": "https://picsum.photos/seed/sleep-headphones/600/400",
+    "description": "Comfortable headband with built-in wireless headphones."
+  },
+  {
+    "id": "p-1054",
+    "name": "Classic Fedora Hat",
+    "type": "Apparel",
+    "basePrice": 29.99,
+    "currency": "USD",
+    "stock": 32,
+    "image": "https://picsum.photos/seed/fedora-hat/600/400",
+    "description": "Timeless fedora hat made with premium wool."
+  },
+  {
+    "id": "p-1055",
+    "name": "Expandable Garden Hose",
+    "type": "Outdoors",
+    "basePrice": 22.5,
+    "currency": "EUR",
+    "stock": 28,
+    "image": "https://picsum.photos/seed/garden-hose/600/400",
+    "description": "Lightweight hose expands up to 50 feet when filled."
+  },
+  {
+    "id": "p-1056",
+    "name": "Rechargeable Hand Warmer",
+    "type": "Electronics",
+    "basePrice": 119,
+    "currency": "HKD",
+    "stock": 26,
+    "image": "https://picsum.photos/seed/hand-warmer/600/400",
+    "description": "Double-sided rapid heating with USB charging."
+  },
+  {
+    "id": "p-1057",
+    "name": "Premium Chef Knife",
+    "type": "Kitchen",
+    "basePrice": 165,
+    "currency": "RMB",
+    "stock": 13,
+    "image": "https://picsum.photos/seed/chef-knife/600/400",
+    "description": "Razor-sharp stainless steel chef's knife for precision slicing."
+  },
+  {
+    "id": "p-1058",
+    "name": "Woven Wool Scarf",
+    "type": "Apparel",
+    "basePrice": 19.99,
+    "currency": "USD",
+    "stock": 40,
+    "image": "https://picsum.photos/seed/wool-scarf/600/400",
+    "description": "Soft and stylish wool scarf for chilly days."
+  },
+  {
+    "id": "p-1059",
+    "name": "Magnetic Spice Jars",
+    "type": "Kitchen",
+    "basePrice": 24.5,
+    "currency": "EUR",
+    "stock": 31,
+    "image": "https://picsum.photos/seed/spice-jars/600/400",
+    "description": "Set of 6 magnetic spice jars for easy storage."
+  },
+  {
+    "id": "p-1060",
+    "name": "Waterproof Action Camera",
+    "type": "Electronics",
+    "basePrice": 399,
+    "currency": "HKD",
+    "stock": 15,
+    "image": "https://picsum.photos/seed/action-camera/600/400",
+    "description": "4K waterproof action cam with wide-angle lens."
+  },
+  {
+    "id": "p-1061",
+    "name": "Bamboo Charcoal Face Mask",
+    "type": "Personal Care",
+    "basePrice": 35,
+    "currency": "RMB",
+    "stock": 55,
+    "image": "https://picsum.photos/seed/charcoal-mask/600/400",
+    "description": "Detoxifying mask with natural bamboo charcoal."
+  },
+  {
+    "id": "p-1062",
+    "name": "Travel Organizer Pouch",
+    "type": "Accessories",
+    "basePrice": 12.99,
+    "currency": "USD",
+    "stock": 52,
+    "image": "https://picsum.photos/seed/travel-pouch/600/400",
+    "description": "Multi-pocket pouch for electronics and documents."
+  },
+  {
+    "id": "p-1063",
+    "name": "LED Fairy Lights",
+    "type": "Home",
+    "basePrice": 11.5,
+    "currency": "EUR",
+    "stock": 50,
+    "image": "https://picsum.photos/seed/fairy-lights/600/400",
+    "description": "Battery-powered string lights for cozy ambiance."
+  },
+  {
+    "id": "p-1064",
+    "name": "Stainless Steel Thermos",
+    "type": "Outdoors",
+    "basePrice": 98,
+    "currency": "HKD",
+    "stock": 22,
+    "image": "https://picsum.photos/seed/thermos/600/400",
+    "description": "Keeps beverages hot or cold for up to 12 hours."
+  },
+  {
+    "id": "p-1065",
+    "name": "Ergonomic Foot Rest",
+    "type": "Home",
+    "basePrice": 89,
+    "currency": "RMB",
+    "stock": 25,
+    "image": "https://picsum.photos/seed/foot-rest/600/400",
+    "description": "Memory foam foot rest for ultimate desk comfort."
+  },
+  {
+    "id": "p-1066",
+    "name": "Minimalist Card Holder",
+    "type": "Accessories",
+    "basePrice": 13.99,
+    "currency": "USD",
+    "stock": 38,
+    "image": "https://picsum.photos/seed/card-holder/600/400",
+    "description": "Slim card holder made from vegan leather."
+  },
+  {
+    "id": "p-1067",
+    "name": "Silicone Oven Mitts",
+    "type": "Kitchen",
+    "basePrice": 10.5,
+    "currency": "EUR",
+    "stock": 46,
+    "image": "https://picsum.photos/seed/oven-mitts/600/400",
+    "description": "Heat-resistant silicone mitts for safe cooking."
+  },
+  {
+    "id": "p-1068",
+    "name": "Wireless Charging Stand",
+    "type": "Electronics",
+    "basePrice": 159,
+    "currency": "HKD",
+    "stock": 29,
+    "image": "https://picsum.photos/seed/charging-stand/600/400",
+    "description": "Fast wireless stand charger for phones and earbuds."
+  },
+  {
+    "id": "p-1069",
+    "name": "Ceramic Travel Tumbler",
+    "type": "Kitchen",
+    "basePrice": 69,
+    "currency": "RMB",
+    "stock": 20,
+    "image": "https://picsum.photos/seed/travel-tumbler/600/400",
+    "description": "Insulated ceramic tumbler with leakproof lid."
+  },
+  {
+    "id": "p-1070",
+    "name": "Wool Touchscreen Gloves",
+    "type": "Apparel",
+    "basePrice": 15.99,
+    "currency": "USD",
+    "stock": 16,
+    "image": "https://picsum.photos/seed/touch-gloves/600/400",
+    "description": "Warm gloves compatible with all touchscreens."
+  },
+  {
+    "id": "p-1071",
+    "name": "Adjustable Resistance Bands",
+    "type": "Fitness",
+    "basePrice": 14.99,
+    "currency": "EUR",
+    "stock": 37,
+    "image": "https://picsum.photos/seed/resistance-bands/600/400",
+    "description": "Set of 5 resistance bands for total body workouts."
+  },
+  {
+    "id": "p-1072",
+    "name": "Outdoor Solar Lantern",
+    "type": "Outdoors",
+    "basePrice": 119,
+    "currency": "HKD",
+    "stock": 18,
+    "image": "https://picsum.photos/seed/solar-lantern/600/400",
+    "description": "Solar-powered LED lantern for camping or patios."
+  },
+  {
+    "id": "p-1073",
+    "name": "Portable UV Sterilizer",
+    "type": "Electronics",
+    "basePrice": 55,
+    "currency": "RMB",
+    "stock": 23,
+    "image": "https://picsum.photos/seed/uv-sterilizer/600/400",
+    "description": "Handheld UV-C light sterilizer for phones and keys."
+  },
+  {
+    "id": "p-1074",
+    "name": "Geometric Wall Clock",
+    "type": "Home",
+    "basePrice": 19.99,
+    "currency": "USD",
+    "stock": 30,
+    "image": "https://picsum.photos/seed/wall-clock/600/400",
+    "description": "Modern wall clock with geometric design."
+  },
+  {
+    "id": "p-1075",
+    "name": "Cotton Canvas Apron",
+    "type": "Kitchen",
+    "basePrice": 17.5,
+    "currency": "EUR",
+    "stock": 29,
+    "image": "https://picsum.photos/seed/canvas-apron/600/400",
+    "description": "Durable apron with front pockets and adjustable straps."
+  }
+]
