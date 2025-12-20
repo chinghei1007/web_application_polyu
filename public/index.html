@@ -894,9 +894,47 @@
     state.currency = els.currency.value;
     saveJSON('currency', state.currency);
     renderEverything();
-  });
+  }); //
   els.refreshRates.addEventListener('click', loadRates);
   els.startKeepAlive.addEventListener('click', startKeepAlive);
+  // Sync awselect UI changes back to app state
+function bindAwselectHandlers() {
+  // Currency
+  $('#awselect_currency .back_face a').on('click', function() {
+    const value = $(this).text()
+    console.log("currency value: ", value);
+    state.currency = value;
+    els.currency.value = value;
+    saveJSON('currency', state.currency);
+    renderEverything();
+  });
+
+  // Layout
+  $('#awselect_layout .back_face a').on('click', function() {
+    const value = $(this).text()
+    console.log("layout value: ", value);
+    state.layout = value;
+    saveJSON('layout', state.layout);
+    renderCatalog(); // layout only affects catalog
+  });
+
+  // Sort
+  $('#awselect_sortBy .back_face a').on('click', function() {
+    const value = $(this).text() 
+    console.log("sort value: ", value);
+    els.sortBy.value = value; // optional: keep native select in sync
+    renderCatalog();
+  });
+
+  // Filter Type
+  $('#awselect_filterType .back_face a').on('click', function() {
+    const value = $(this).text()
+    console.log("filter type value: ", value);
+    els.filterType.value = value; // optional
+    applyFilters();
+    renderCatalog();
+  });
+}
 
   // Product Modal
   els.closeModal.addEventListener('click', closeModal);
@@ -1062,19 +1100,20 @@ els.confirmPurchase.addEventListener('click', async () => {
     handleRoute();
     window.addEventListener('hashchange', handleRoute);
 
-    $(document).ready(function(){ 
-      $('select').awselect({
-        background: "#121935",                 // matches --card
-        active_background: "#1a2245",          // slightly brighter card
-        placeholder_color: "#95a3b3",          // matches --muted
-        placeholder_active_color: "#cbd5e1",   // matches filter header text
-        option_color: "#e7ecf3",               // matches --text (white-ish)
-        vertical_padding: "0",
-        horizontal_padding: "10px",
-        immersive: false,
-        height: "fit-content"
-      });
-    });
+    // $(document).ready(function(){ 
+    //   $('select').awselect({
+    //     background: "#121935",                 // matches --card
+    //     active_background: "#1a2245",          // slightly brighter card
+    //     placeholder_color: "#95a3b3",          // matches --muted
+    //     placeholder_active_color: "#cbd5e1",   // matches filter header text
+    //     option_color: "#e7ecf3",               // matches --text (white-ish)
+    //     vertical_padding: "0",
+    //     horizontal_padding: "10px",
+    //     immersive: false,
+    //     height: "fit-content"
+    //   });
+    //   bindAwselectHandlers()
+    // });
   })();
 </script>
 </body>
