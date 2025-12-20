@@ -1,6 +1,3 @@
-// server.js
-// Minimal Node.js backend using Express to support keep-alive and purchase simulation.
-
 const express = require('express');
 const cors = require('cors');
 
@@ -57,8 +54,6 @@ app.post('/api/purchase', async (req, res) => {
 // Exchange rates endpoint (mocked but could be swapped to real provider).
 // Base is USD. Rates: USD, EUR, HKD, RMB.
 app.get('/api/rates', (req, res) => {
-  // In real use, fetch from a provider like ECB, exchangerate.host, etc.
-  // Here we provide a stable mock set. You can update as needed.
   res.json({
     base: 'USD',
     ts: new Date().toISOString(),

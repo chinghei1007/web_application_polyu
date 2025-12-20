@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,7 +10,7 @@
   <link rel="stylesheet" type="text/css" href="awesome-select-0.1.2/package/css/awselect.css">
   <link rel="icon" href="icon.svg">
   <style>
-    :root{
+    :root {
       --bg: #0b1020;
       --card: #121935;
       --muted: #95a3b3;
@@ -18,82 +19,259 @@
       --accent-2: #60a5fa;
       --danger: #f87171;
       --warning: #fbbf24;
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --shadow: 0 10px 30px rgba(0, 0, 0, .35);
       --radius: 14px;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:linear-gradient(160deg,#0b1020,#0b1228 40%,#0e1533);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
-    a{color:inherit}
-    .app{
-      min-height:100vh; display:flex; flex-direction:column;
+
+    * {
+      box-sizing: border-box
     }
-    header{
-      position:sticky; top:0; z-index:50;
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(160deg, #0b1020, #0b1228 40%, #0e1533);
+      color: var(--text);
+      font-family: Inter, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif
+    }
+
+    a {
+      color: inherit
+    }
+
+    .app {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
       backdrop-filter: blur(8px);
-      background: rgba(10,14,30,0.6);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
+      background: rgba(10, 14, 30, 0.6);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     }
-    .nav{
-      max-width:1200px; margin:0 auto; padding:14px 16px; display:flex; align-items:center; gap:12px;
+
+    .nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
-    .awselect .front_face {width: 120px;}
-    .bg {border-radius: 10px;}
-    .brand{display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.3px}
-    .brand img{width:28px; height:28px}
-    .grow{flex:1}
-    .toolbar{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
-    .select, .input, .button{
-      background:var(--card); color:var(--text); border:1px solid rgba(255,255,255,.08);
-      border-radius:10px; padding:10px 12px; outline:none; transition:.2s; box-shadow: var(--shadow);
+
+    .awselect .front_face {
+      width: 120px;
     }
-    .select:hover, .input:hover, .button:hover{border-color: rgba(255,255,255,.2)}
-    .button{cursor:pointer}
-    .button.primary{background: linear-gradient(135deg, var(--accent), #22c55e); color:#0b1020; font-weight:700}
-    .button.ghost{background: transparent; border:1px solid rgba(255,255,255,.2)}
-    .badge{
-      padding:2px 8px; border-radius:999px; font-size:12px; background: rgba(255,255,255,.1)
+
+    .bg {
+      border-radius: 10px;
     }
-    .content{
-      max-width:1200px; margin: 18px auto; padding: 0 16px;
-      display:grid; grid-template-columns: 280px 1fr; gap:18px; height: fit-content;
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      letter-spacing: .3px
     }
-    @media (max-width: 900px){
-      .content{grid-template-columns: 1fr}
+
+    .brand img {
+      width: 28px;
+      height: 28px
     }
-    .awselect .front_face .placeholder {width: 90px;}
-    .panel{
+
+    .grow {
+      flex: 1
+    }
+
+    .toolbar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap
+    }
+
+    .select,
+    .input,
+    .button {
+      background: var(--card);
+      color: var(--text);
+      border: 1px solid rgba(255, 255, 255, .08);
+      border-radius: 10px;
+      padding: 10px 12px;
+      outline: none;
+      transition: .2s;
+      box-shadow: var(--shadow);
+    }
+
+    .select:hover,
+    .input:hover,
+    .button:hover {
+      border-color: rgba(255, 255, 255, .2)
+    }
+
+    .button {
+      cursor: pointer
+    }
+
+    .button.primary {
+      background: linear-gradient(135deg, var(--accent), #22c55e);
+      color: #0b1020;
+      font-weight: 700
+    }
+
+    .button.ghost {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, .2)
+    }
+
+    .badge {
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      background: rgba(255, 255, 255, .1)
+    }
+
+    .content {
+      max-width: 1200px;
+      margin: 18px auto;
+      padding: 0 16px;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 18px;
+      height: fit-content;
+    }
+
+    @media (max-width: 900px) {
+      .content {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .awselect .front_face .placeholder {
+      width: 90px;
+    }
+
+    .panel {
       background: linear-gradient(180deg, #0f1736, #0e1631);
-      border:1px solid rgba(255,255,255,.06);
+      border: 1px solid rgba(255, 255, 255, .06);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      padding:14px;
+      padding: 14px;
     }
-    .panel h3{margin:6px 6px 10px;font-size:16px;color:#cbd5e1;font-weight:600}
-    .filters .row{display:flex; gap:10px; align-items:center; margin:10px 0; flex-wrap: wrap}
-    .filters label{font-size:13px; color: var(--muted)}
-    .range{display:flex; gap:8px; align-items:center}
-    .range input{width:100%}
-    .grid{
-      display:grid; gap:16px;
+
+    .panel h3 {
+      margin: 6px 6px 10px;
+      font-size: 16px;
+      color: #cbd5e1;
+      font-weight: 600
+    }
+
+    .filters .row {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin: 10px 0;
+      flex-wrap: wrap
+    }
+
+    .filters label {
+      font-size: 13px;
+      color: var(--muted)
+    }
+
+    .range {
+      display: flex;
+      gap: 8px;
+      align-items: center
+    }
+
+    .range input {
+      width: 100%
+    }
+
+    .grid {
+      display: grid;
+      gap: 16px;
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
-    @media (max-width: 1100px){ .grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-    @media (max-width: 640px){ .grid{ grid-template-columns: 1fr; } }
 
-    .card{
-      background: linear-gradient(180deg, #121a3a, #0e1531);
-      border:1px solid rgba(255,255,255,.06);
-      border-radius: 16px; overflow:hidden; display:flex; flex-direction:column; box-shadow: var(--shadow);
+    @media (max-width: 1100px) {
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
     }
-    .card .img-wrap{position:relative; aspect-ratio: 3 / 2; overflow:hidden}
-    .card img{width:100%; height:100%; object-fit:cover; transition: transform .35s ease}
-    .card:hover img{transform: scale(1.06)}
-    .card .meta{padding:12px; display:flex; flex-direction:column; gap:8px}
-    .name{font-weight:700}
-    .muted{color: var(--muted); font-size: 13px}
-    .row-between{display:flex; align-items:center; justify-content:space-between; gap:10px}
-    .price{font-weight:800; letter-spacing:.2px}
-    .stock{font-size:12px; color:#9fb3c8}
+
+    @media (max-width: 640px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background: linear-gradient(180deg, #121a3a, #0e1531);
+      border: 1px solid rgba(255, 255, 255, .06);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow);
+    }
+
+    .card .img-wrap {
+      position: relative;
+      aspect-ratio: 3 / 2;
+      overflow: hidden
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .35s ease
+    }
+
+    .card:hover img {
+      transform: scale(1.06)
+    }
+
+    .card .meta {
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px
+    }
+
+    .name {
+      font-weight: 700
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 13px
+    }
+
+    .row-between {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px
+    }
+
+    .price {
+      font-weight: 800;
+      letter-spacing: .2px
+    }
+
+    .stock {
+      font-size: 12px;
+      color: #9fb3c8
+    }
 
     /* List layout */
     .list-view {
@@ -108,7 +286,7 @@
       gap: 12px;
       align-items: start;
       background: linear-gradient(180deg, #121a3a, #0e1531);
-      border: 1px solid rgba(255,255,255,.06);
+      border: 1px solid rgba(255, 255, 255, .06);
       border-radius: 16px;
       padding: 12px;
       box-shadow: var(--shadow);
@@ -127,42 +305,48 @@
       gap: 6px;
     }
 
-    .list-item, .card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  border-radius: 16px;
-}
-.list-item::before, .card::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    45deg,
-    transparent,
-    transparent 40%,
-    rgba(110, 231, 183, 0.25), /* --accent: #6ee7b7 → soft glow */
-    transparent 60%,
-    transparent
-  );
-  transform: rotate(-45deg) translateY(100%);
-  opacity: 0;
-  transition: opacity 0.4s ease, transform 0.6s ease;
-  pointer-events: none;
-  z-index: 1;
-}
-.list-item:hover, .card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 20px rgba(110, 231, 183, 0.25);
-  filter: brightness(1.1);
-}
-.list-item:hover::before, .card:hover::before {
-  opacity: 1;
-  transform: rotate(-45deg) translateY(0);
-}
+    .list-item,
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+    }
+
+    .list-item::before,
+    .card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg,
+          transparent,
+          transparent 40%,
+          rgba(110, 231, 183, 0.25),
+          /* --accent: #6ee7b7 → soft glow */
+          transparent 60%,
+          transparent);
+      transform: rotate(-45deg) translateY(100%);
+      opacity: 0;
+      transition: opacity 0.4s ease, transform 0.6s ease;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .list-item:hover,
+    .card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 20px rgba(110, 231, 183, 0.25);
+      filter: brightness(1.1);
+    }
+
+    .list-item:hover::before,
+    .card:hover::before {
+      opacity: 1;
+      transform: rotate(-45deg) translateY(0);
+    }
 
     .list-item .name {
       font-weight: 700;
@@ -179,82 +363,361 @@
       }
     }
 
-    .bag{
+    .bag {
       display: none !important;
     }
-    .bag .items{display:flex; flex-direction:column; gap:10px; max-height: 50vh; overflow:auto; padding-right:4px}
-    .bag-item{
-      display:grid; grid-template-columns: 48px 1fr auto; gap:10px; align-items:center;
-      background: rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06); border-radius:12px; padding:8px;
+
+    .bag .items {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-height: 50vh;
+      overflow: auto;
+      padding-right: 4px
     }
-    .bag-item img{width:48px; height:48px; object-fit:cover; border-radius:10px}
-    .qty{display:flex; align-items:center; gap:6px}
-    .qty button{
-      width:24px; height:24px; border-radius:8px; border:1px solid rgba(255,255,255,.15); background: transparent; color: var(--text); cursor:pointer
+
+    .bag-item {
+      display: grid;
+      grid-template-columns: 48px 1fr auto;
+      gap: 10px;
+      align-items: center;
+      background: rgba(255, 255, 255, .04);
+      border: 1px solid rgba(255, 255, 255, .06);
+      border-radius: 12px;
+      padding: 8px;
     }
-    .qty input{width:42px; padding:6px; text-align:center; background:transparent; border:1px solid rgba(255,255,255,.15); color:var(--text); border-radius:8px}
-    .bag .summary{display:flex; align-items:center; justify-content:space-between; margin-top:8px}
-    .history{margin-top:14px; display:flex; flex-direction:column; gap:10px}
+
+    .bag-item img {
+      width: 48px;
+      height: 48px;
+      object-fit: cover;
+      border-radius: 10px
+    }
+
+    .qty {
+      display: flex;
+      align-items: center;
+      gap: 6px
+    }
+
+    .qty button {
+      width: 24px;
+      height: 24px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, .15);
+      background: transparent;
+      color: var(--text);
+      cursor: pointer
+    }
+
+    .qty input {
+      width: 42px;
+      padding: 6px;
+      text-align: center;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, .15);
+      color: var(--text);
+      border-radius: 8px
+    }
+
+    .bag .summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 8px
+    }
+
+    .history {
+      margin-top: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px
+    }
+
     .history .record {
-  transition: transform 0.25s ease, filter 0.25s ease;
-}
-.history .record:hover {
-  transform: scale(1.015);
-  filter: brightness(1.15);
-  /* background: rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06); border-radius:12px; padding:10px */
-}
+      transition: transform 0.25s ease, filter 0.25s ease;
+    }
 
-    .history .record .title{font-weight:700}
+    .history .record:hover {
+      transform: scale(1.015);
+      filter: brightness(1.15);
+      /* background: rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06); border-radius:12px; padding:10px */
+    }
 
-    .modal-backdrop { 
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  position:fixed; inset:0; background: rgba(0,0,0,.6);
-  display:none; align-items:center; justify-content:center; z-index:60;
-}
-.modal-backdrop.active {
-  opacity: 1;
-  pointer-events: all;
-}
-    .modal{background: linear-gradient(180deg,#141c3f,#0e1531); border:1px solid rgba(255,255,255,.08); border-radius:18px; box-shadow: var(--shadow); max-width: 920px; width: calc(100% - 24px); max-height: 86vh; overflow:auto}
-    .modal .body{display:grid; grid-template-columns: 1fr 1fr; gap:12px; padding:14px}
-    @media (max-width: 900px){ .modal .body{grid-template-columns: 1fr} }
-    .modal img{width:100%; height:100%; object-fit:cover; border-radius:14px}
-    .modal .detail{display:flex; flex-direction:column; gap:10px}
-    .modal .close{position:sticky; top:0; display:flex; justify-content:flex-end; padding:8px}
-    .modal .close button{background:transparent; border:1px solid rgba(255,255,255,.2); color: var(--text); border-radius:999px; padding:6px 10px; cursor:pointer}
+    .history .record .title {
+      font-weight: 700
+    }
+
+    .modal-backdrop {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, .6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 60;
+    }
+
+    .modal-backdrop.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
     .modal {
-  transform: translateY(-40px);
-  opacity: 0;
-  transition: transform 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28), opacity 0.3s ease;
-}
-.modal-backdrop.active .modal {
-  transform: translateY(0);
-  opacity: 1;
-}
-#modalBackdrop, #bagModalBackdrop {
-  display: flex !important;
-}
+      background: linear-gradient(180deg, #141c3f, #0e1531);
+      border: 1px solid rgba(255, 255, 255, .08);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      max-width: 920px;
+      width: calc(100% - 24px);
+      max-height: 86vh;
+      overflow: auto
+    }
+
+    .modal .body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      padding: 14px
+    }
+
+    @media (max-width: 900px) {
+      .modal .body {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .modal img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 14px
+    }
+
+    .modal .detail {
+      display: flex;
+      flex-direction: column;
+      gap: 10px
+    }
+
+    .modal .close {
+      position: sticky;
+      top: 0;
+      display: flex;
+      justify-content: flex-end;
+      padding: 8px
+    }
+
+    .modal .close button {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, .2);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 6px 10px;
+      cursor: pointer
+    }
+
+    .modal {
+      transform: translateY(-40px);
+      opacity: 0;
+      transition: transform 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28), opacity 0.3s ease;
+    }
+
+    .modal-backdrop.active .modal {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    #modalBackdrop,
+    #bagModalBackdrop {
+      display: flex !important;
+    }
+
+    /* Loading Screen */
+    .loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: linear-gradient(160deg, #0b1020, #0b1228 40%, #0e1533);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.5s ease;
+    }
+
+    .loading-content {
+      text-align: center;
+      color: #e7ecf3;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .loading-screen h1 {
+      font-size: 48px;
+      margin-bottom: 40px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      letter-spacing: 1px;
+    }
+
+    /* Start Button with Hover Effect */
+    .start-button {
+      border-radius: 4px;
+      background-color: #5ca1e1;
+      border: none;
+      color: #fff;
+      text-align: center;
+      font-size: 32px;
+      padding: 16px;
+      width: 220px;
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      cursor: pointer;
+      margin: 36px auto;
+      box-shadow: 0 10px 20px -8px rgba(0, 0, 0, .7);
+      position: relative;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .start-button:hover {
+      background-color: #6cb3f5;
+      box-shadow: 0 12px 24px -8px rgba(0, 0, 0, .8);
+      padding-right: 24px;
+      padding-left: 8px;
+    }
+
+    .start-button:after {
+      content: '»';
+      position: absolute;
+      opacity: 0;
+      top: 14px;
+      right: -20px;
+      transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      font-weight: bold;
+      font-size: 28px;
+    }
+
+    .start-button:hover:after {
+      opacity: 1;
+      right: 10px;
+    }
+
+    /* Loader Animation */
+    .loader {
+      width: 48px;
+      height: 48px;
+      border: 5px solid rgba(255, 255, 255, 0.3);
+      border-top-color: #FFF;
+      border-radius: 50%;
+      display: inline-block;
+      box-sizing: border-box;
+      position: relative;
+      animation: spin 1s linear infinite;
+      margin-top: 20px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      margin: auto;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Content fade transition */
+    .content-fade {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .content-fade.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Hide main app initially */
+    .app {
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .app.visible {
+      opacity: 1;
+    }
 
     /* Floating Keep-Alive Indicator (top-right) */
-    .indicator{
-      position: fixed; top: 12px; right: 12px; z-index: 80;
-      display:flex; align-items:center; gap:8px;
-      background: rgba(10, 14, 30, 0.7); border: 1px solid rgba(255,255,255,.1);
-      padding:8px 12px; border-radius:999px; backdrop-filter: blur(6px);
-      box-shadow: var(--shadow); color:#cbd5e1; font-size:13px
+    .indicator {
+      position: fixed;
+      top: 12px;
+      right: 12px;
+      z-index: 80;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(10, 14, 30, 0.7);
+      border: 1px solid rgba(255, 255, 255, .1);
+      padding: 8px 12px;
+      border-radius: 999px;
+      backdrop-filter: blur(6px);
+      box-shadow: var(--shadow);
+      color: #cbd5e1;
+      font-size: 13px
     }
-    .dot{width:10px; height:10px; border-radius:999px; background: #9ca3af; box-shadow: 0 0 0 2px rgba(255,255,255,.08) inset}
-    .dot.ok{background: #22c55e}
-    .dot.wait{background: #fbbf24}
-    .dot.off{background: #9ca3af}
-    .hidden{display:none}
 
-    footer{margin-top:auto; padding:28px 16px; text-align:center; color: var(--muted); font-size: 13px}
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: #9ca3af;
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, .08) inset
+    }
+
+    .dot.ok {
+      background: #22c55e
+    }
+
+    .dot.wait {
+      background: #fbbf24
+    }
+
+    .dot.off {
+      background: #9ca3af
+    }
+
+    .hidden {
+      display: none
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 28px 16px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px
+    }
   </style>
 </head>
+
 <body>
+  <div id="loadingScreen" class="loading-screen">
+    <div class="loading-content">
+      <h1>Client-Side Shopping</h1>
+      <button id="startButton" class="start-button">Start</button>
+      <div id="loader" class="loader" style="display: none;"></div>
+    </div>
+  </div>
   <div class="app">
     <header>
       <div class="nav">
@@ -301,7 +764,7 @@
     </div>
 
     <main class="content">
-      <aside class="panel filters">
+      <aside class="panel filters content-fade">
         <h3>Filters</h3>
         <div class="row">
           <label>Type</label>
@@ -328,7 +791,7 @@
         </div>
       </aside>
 
-      <section class="panel">
+      <section class="panel content-fade">
         <div class="row-between" style="margin:8px 6px 14px">
           <div>
             <h3 style="margin:0">Catalog</h3>
@@ -341,7 +804,7 @@
         <div class="grid" id="grid"></div>
       </section>
 
-      <div id="checkoutPage" class="panel" style="display:none; grid-column:1/-1;">
+      <div id="checkoutPage" class="panel content-fade" style="display:none; grid-column:1/-1;">
         <h2 style="margin:0 0 16px">Checkout</h2>
         <div id="checkoutSummary"></div>
         <div style="display:flex; gap:10px; margin-top:20px;">
@@ -391,9 +854,12 @@
       <div class="body" style="grid-template-columns: 1fr; padding:14px;">
         <h2 style="margin:0 0 12px">Your Shopping Bag</h2>
 
-        <div class="items" id="bagModalItems" style="display:flex; flex-direction:column; gap:10px; max-height: 50vh; overflow:auto; padding-right:4px;"></div>
+        <div class="items" id="bagModalItems"
+          style="display:flex; flex-direction:column; gap:10px; max-height: 50vh; overflow:auto; padding-right:4px;">
+        </div>
 
-        <div class="summary" style="display:flex; justify-content:space-between; margin-top:16px; font-size:18px; font-weight:800;">
+        <div class="summary"
+          style="display:flex; justify-content:space-between; margin-top:16px; font-size:18px; font-weight:800;">
           <div>Total:</div>
           <div id="bagModalTotal">—</div>
         </div>
@@ -406,152 +872,152 @@
     </div>
   </div>
 
-<script>
-  // ---- State & Utilities ----
-  const state = {
-    products: [],
-    filtered: [],
-    bag: loadJSON('bag', []),
-    currency: loadJSON('currency', 'USD'),
-    layout: loadJSON('layout', 'grid'),
-    rates: loadJSON('rates', { base: 'USD', rates: { USD: 1, EUR: 0.92, HKD: 7.8, RMB: 7.1 }, ts: null }),
-    history: loadJSON('history', []),
-    startedKeepAlive: false,
-    keepAliveOk: false,
-    keepAliveTimer: null
-  };
+  <script>
+    // ---- State & Utilities ----
+    const state = {
+      products: [],
+      filtered: [],
+      bag: loadJSON('bag', []),
+      currency: loadJSON('currency', 'USD'),
+      layout: loadJSON('layout', 'grid'),
+      rates: loadJSON('rates', { base: 'USD', rates: { USD: 1, EUR: 0.92, HKD: 7.8, RMB: 7.1 }, ts: null }),
+      history: loadJSON('history', []),
+      startedKeepAlive: false,
+      keepAliveOk: false,
+      keepAliveTimer: null
+    };
 
-  const els = {
-    grid: document.getElementById('grid'),
-    checkoutPage: document.getElementById('checkoutPage'),
-    checkoutSummary: document.getElementById('checkoutSummary'),
-    backToShop: document.getElementById('backToShop'),
-    confirmPurchase: document.getElementById('confirmPurchase'),
-    catalogMeta: document.getElementById('catalogMeta'),
-    filterType: document.getElementById('filterType'),
-    minPrice: document.getElementById('minPrice'),
-    maxPrice: document.getElementById('maxPrice'),
-    applyFilters: document.getElementById('applyFilters'),
-    clearFilters: document.getElementById('clearFilters'),
-    sortBy: document.getElementById('sortBy'),
-    currency: document.getElementById('currency'),
-    layout: document.getElementById('layout'),
-    refreshRates: document.getElementById('refreshRates'),
-    bagCount: document.getElementById('bagCount'),
-    historyList: document.getElementById('historyList'),
-    // product modal
-    modalBackdrop: document.getElementById('modalBackdrop'),
-    closeModal: document.getElementById('closeModal'),
-    modalImg: document.getElementById('modalImg'),
-    modalType: document.getElementById('modalType'),
-    modalTitle: document.getElementById('modalTitle'),
-    modalDesc: document.getElementById('modalDesc'),
-    modalPrice: document.getElementById('modalPrice'),
-    modalStock: document.getElementById('modalStock'),
-    qtyDec: document.getElementById('qtyDec'),
-    qtyInc: document.getElementById('qtyInc'),
-    qtyInput: document.getElementById('qtyInput'),
-    addToBag: document.getElementById('addToBag'),
-    // bag modal
-    bagModalBackdrop: document.getElementById('bagModalBackdrop'),
-    closeBagModal: document.getElementById('closeBagModal'),
-    bagModalItems: document.getElementById('bagModalItems'),
-    bagModalTotal: document.getElementById('bagModalTotal'),
-    clearBagInModal: document.getElementById('clearBagInModal'),
-    goToCheckout: document.getElementById('goToCheckout'),
-    // keep-alive
-    startKeepAlive: document.getElementById('startKeepAlive'),
-    indicator: document.getElementById('keepAliveIndicator'),
-    indicatorDot: document.getElementById('indicatorDot'),
-    indicatorText: document.getElementById('indicatorText'),
-    openBag: document.getElementById('openBag')
-  };
+    const els = {
+      grid: document.getElementById('grid'),
+      checkoutPage: document.getElementById('checkoutPage'),
+      checkoutSummary: document.getElementById('checkoutSummary'),
+      backToShop: document.getElementById('backToShop'),
+      confirmPurchase: document.getElementById('confirmPurchase'),
+      catalogMeta: document.getElementById('catalogMeta'),
+      filterType: document.getElementById('filterType'),
+      minPrice: document.getElementById('minPrice'),
+      maxPrice: document.getElementById('maxPrice'),
+      applyFilters: document.getElementById('applyFilters'),
+      clearFilters: document.getElementById('clearFilters'),
+      sortBy: document.getElementById('sortBy'),
+      currency: document.getElementById('currency'),
+      layout: document.getElementById('layout'),
+      refreshRates: document.getElementById('refreshRates'),
+      bagCount: document.getElementById('bagCount'),
+      historyList: document.getElementById('historyList'),
+      // product modal
+      modalBackdrop: document.getElementById('modalBackdrop'),
+      closeModal: document.getElementById('closeModal'),
+      modalImg: document.getElementById('modalImg'),
+      modalType: document.getElementById('modalType'),
+      modalTitle: document.getElementById('modalTitle'),
+      modalDesc: document.getElementById('modalDesc'),
+      modalPrice: document.getElementById('modalPrice'),
+      modalStock: document.getElementById('modalStock'),
+      qtyDec: document.getElementById('qtyDec'),
+      qtyInc: document.getElementById('qtyInc'),
+      qtyInput: document.getElementById('qtyInput'),
+      addToBag: document.getElementById('addToBag'),
+      // bag modal
+      bagModalBackdrop: document.getElementById('bagModalBackdrop'),
+      closeBagModal: document.getElementById('closeBagModal'),
+      bagModalItems: document.getElementById('bagModalItems'),
+      bagModalTotal: document.getElementById('bagModalTotal'),
+      clearBagInModal: document.getElementById('clearBagInModal'),
+      goToCheckout: document.getElementById('goToCheckout'),
+      // keep-alive
+      startKeepAlive: document.getElementById('startKeepAlive'),
+      indicator: document.getElementById('keepAliveIndicator'),
+      indicatorDot: document.getElementById('indicatorDot'),
+      indicatorText: document.getElementById('indicatorText'),
+      openBag: document.getElementById('openBag')
+    };
 
-  let modalProduct = null;
+    let modalProduct = null;
 
-  function saveJSON(key, value){ localStorage.setItem(key, JSON.stringify(value)); }
-  function loadJSON(key, def){ try{ return JSON.parse(localStorage.getItem(key)) ?? def } catch{ return def } }
+    function saveJSON(key, value) { localStorage.setItem(key, JSON.stringify(value)); }
+    function loadJSON(key, def) { try { return JSON.parse(localStorage.getItem(key)) ?? def } catch { return def } }
 
-  function formatCurrency(amount, curr){
-    return new Intl.NumberFormat(undefined, { style: 'currency', currency: curr }).format(amount);
-  }
-
-  function convertPrice(usdAmount, toCurrency){
-    const { rates } = state.rates || {};
-    if(!rates || !rates[toCurrency]) return usdAmount;
-    const base = state.rates.base || 'USD';
-    if(base === 'USD') return usdAmount * rates[toCurrency];
-    const usdToBase = rates[base] ? (1 / rates[base]) : 1;
-    const baseToTarget = rates[toCurrency] || 1;
-    return usdAmount * usdToBase * baseToTarget;
-  }
-
-  function priceInSelectedCurrency(product){
-    const selected = state.currency;
-    const base = state.rates.base || 'USD';
-    const rates = state.rates.rates || {};
-    let priceUSD;
-    if(product.currency === 'USD'){
-      priceUSD = product.basePrice;
-    } else if(base === 'USD'){
-      const r = rates[product.currency];
-      priceUSD = r ? (product.basePrice / r) : product.basePrice;
-    } else {
-      const rProd = rates[product.currency] || 1;
-      const rUSD = rates['USD'] || 1;
-      priceUSD = product.basePrice / rProd * (1 / rUSD);
+    function formatCurrency(amount, curr) {
+      return new Intl.NumberFormat(undefined, { style: 'currency', currency: curr }).format(amount);
     }
-    return convertPrice(priceUSD, selected);
-  }
 
-  // ---- Data Loading ----
-  async function loadProducts(){
-    const res = await fetch('products.json');
-    const data = await res.json();
-    state.products = data;
-    state.filtered = data.slice();
-    populateTypeOptions();
-    renderCatalog();
-  }
+    function convertPrice(usdAmount, toCurrency) {
+      const { rates } = state.rates || {};
+      if (!rates || !rates[toCurrency]) return usdAmount;
+      const base = state.rates.base || 'USD';
+      if (base === 'USD') return usdAmount * rates[toCurrency];
+      const usdToBase = rates[base] ? (1 / rates[base]) : 1;
+      const baseToTarget = rates[toCurrency] || 1;
+      return usdAmount * usdToBase * baseToTarget;
+    }
 
-  async function loadRates(){
-    try{
-      const res = await fetch('/api/rates');
-      if(!res.ok) throw new Error('Failed rates');
+    function priceInSelectedCurrency(product) {
+      const selected = state.currency;
+      const base = state.rates.base || 'USD';
+      const rates = state.rates.rates || {};
+      let priceUSD;
+      if (product.currency === 'USD') {
+        priceUSD = product.basePrice;
+      } else if (base === 'USD') {
+        const r = rates[product.currency];
+        priceUSD = r ? (product.basePrice / r) : product.basePrice;
+      } else {
+        const rProd = rates[product.currency] || 1;
+        const rUSD = rates['USD'] || 1;
+        priceUSD = product.basePrice / rProd * (1 / rUSD);
+      }
+      return convertPrice(priceUSD, selected);
+    }
+
+    // ---- Data Loading ----
+    async function loadProducts() {
+      const res = await fetch('products.json');
       const data = await res.json();
-      state.rates = data;
-      saveJSON('rates', state.rates);
-    }catch(e){
-      console.warn('Using cached rates. Error:', e.message);
+      state.products = data;
+      state.filtered = data.slice();
+      populateTypeOptions();
+      renderCatalog();
     }
-    renderEverything();
-  }
 
-  function populateTypeOptions(){
-    const types = Array.from(new Set(state.products.map(p => p.type))).sort();
-    els.filterType.innerHTML = '<option value="">All</option>' + types.map(t => `<option value="${t}">${t}</option>`).join('');
-  }
+    async function loadRates() {
+      try {
+        const res = await fetch('/api/rates');
+        if (!res.ok) throw new Error('Failed rates');
+        const data = await res.json();
+        state.rates = data;
+        saveJSON('rates', state.rates);
+      } catch (e) {
+        console.warn('Using cached rates. Error:', e.message);
+      }
+      renderEverything();
+    }
 
-  // ---- Rendering ----
-  function renderCatalog(){
-    const selectedCurrency = state.currency;
-    const sortBy = els.sortBy.value;
-    const layout = state.layout;
-    let list = state.filtered.slice();
-    if(sortBy === 'name') list.sort((a,b)=> a.name.localeCompare(b.name));
-    else if(sortBy === 'type') list.sort((a,b)=> a.type.localeCompare(b.type) || a.name.localeCompare(b.name));
+    function populateTypeOptions() {
+      const types = Array.from(new Set(state.products.map(p => p.type))).sort();
+      els.filterType.innerHTML = '<option value="">All</option>' + types.map(t => `<option value="${t}">${t}</option>`).join('');
+    }
 
-    els.grid.innerHTML = '';
-    els.grid.className = layout === 'list' ? 'list-view' : 'grid';
+    // ---- Rendering ----
+    function renderCatalog() {
+      const selectedCurrency = state.currency;
+      const sortBy = els.sortBy.value;
+      const layout = state.layout;
+      let list = state.filtered.slice();
+      if (sortBy === 'name') list.sort((a, b) => a.name.localeCompare(b.name));
+      else if (sortBy === 'type') list.sort((a, b) => a.type.localeCompare(b.type) || a.name.localeCompare(b.name));
 
-    list.forEach(p => {
-      const price = priceInSelectedCurrency(p);
-      if (layout === 'list') {
-        const item = document.createElement('div');
-        item.className = 'list-item';
-        // Truncate description if too long
-        const desc = p.description ? (p.description.length > 80 ? p.description.substring(0, 80) + '…' : p.description) : '';
-        item.innerHTML = `
+      els.grid.innerHTML = '';
+      els.grid.className = layout === 'list' ? 'list-view' : 'grid';
+
+      list.forEach(p => {
+        const price = priceInSelectedCurrency(p);
+        if (layout === 'list') {
+          const item = document.createElement('div');
+          item.className = 'list-item';
+          // Truncate description if too long
+          const desc = p.description ? (p.description.length > 80 ? p.description.substring(0, 80) + '…' : p.description) : '';
+          item.innerHTML = `
           <img src="${p.image}" alt="${p.name}">
           <div class="meta">
             <div class="row-between">
@@ -566,13 +1032,13 @@
           </div>
           <button class="button ghost" data-id="${p.id}">View</button>
         `;
-        item.querySelector('button').addEventListener('click', () => openModal(p.id));
-        item.querySelector('img').addEventListener('click', () => openModal(p.id));
-        els.grid.appendChild(item);
-      } else {
-        const card = document.createElement('div');
-        card.className = 'card';
-        card.innerHTML = `
+          item.querySelector('button').addEventListener('click', () => openModal(p.id));
+          item.querySelector('img').addEventListener('click', () => openModal(p.id));
+          els.grid.appendChild(item);
+        } else {
+          const card = document.createElement('div');
+          card.className = 'card';
+          card.innerHTML = `
           <div class="img-wrap">
             <img src="${p.image}" alt="${p.name}">
           </div>
@@ -588,60 +1054,60 @@
             <button class="button ghost" data-id="${p.id}">View</button>
           </div>
         `;
-        card.querySelector('button').addEventListener('click', () => openModal(p.id));
-        card.querySelector('.img-wrap').addEventListener('click', () => openModal(p.id));
-        els.grid.appendChild(card);
-      }
-    });
-    els.catalogMeta.textContent = `${list.length} product(s) • Currency: ${selectedCurrency}`;
-  }
-
-  function renderHistory(){
-    const selectedCurrency = state.currency;
-    els.historyList.innerHTML = '';
-    if(state.history.length === 0){
-      const empty = document.createElement('div');
-      empty.className = 'muted';
-      empty.textContent = 'No purchases yet.';
-      els.historyList.appendChild(empty);
-      return;
+          card.querySelector('button').addEventListener('click', () => openModal(p.id));
+          card.querySelector('.img-wrap').addEventListener('click', () => openModal(p.id));
+          els.grid.appendChild(card);
+        }
+      });
+      els.catalogMeta.textContent = `${list.length} product(s) • Currency: ${selectedCurrency}`;
     }
-    state.history.slice().reverse().forEach(rec => {
-      const box = document.createElement('div');
-      box.className = 'record';
-      const itemsText = rec.items.map(i => `${i.name} ×${i.qty}`).join(', ');
-      box.innerHTML = `
+
+    function renderHistory() {
+      const selectedCurrency = state.currency;
+      els.historyList.innerHTML = '';
+      if (state.history.length === 0) {
+        const empty = document.createElement('div');
+        empty.className = 'muted';
+        empty.textContent = 'No purchases yet.';
+        els.historyList.appendChild(empty);
+        return;
+      }
+      state.history.slice().reverse().forEach(rec => {
+        const box = document.createElement('div');
+        box.className = 'record';
+        const itemsText = rec.items.map(i => `${i.name} ×${i.qty}`).join(', ');
+        box.innerHTML = `
         <div class="title">${new Date(rec.date).toLocaleString()}</div>
         <div class="muted">${itemsText}</div>
         <div style="margin-top:6px; font-weight:700">${formatCurrency(rec.total, rec.currency)} ${rec.currency}</div>
       `;
-      els.historyList.appendChild(box);
-    });
-  }
+        els.historyList.appendChild(box);
+      });
+    }
 
-  function renderBagInModal() {
-    const selectedCurrency = state.currency;
-    els.bagModalItems.innerHTML = '';
-    let totalUSD = 0;
-    state.bag.forEach(item => {
-      const product = state.products.find(p => p.id === item.id);
-      if(!product) return;
-      const base = state.rates.base || 'USD';
-      const rates = state.rates.rates || {};
-      let usd;
-      if(product.currency === 'USD') usd = product.basePrice;
-      else if(base === 'USD') {
-        const r = rates[product.currency]; usd = r ? (product.basePrice / r) : product.basePrice;
-      } else {
-        const rProd = rates[product.currency] || 1;
-        const rUSD = rates['USD'] || 1;
-        usd = product.basePrice / rProd * (1 / rUSD);
-      }
-      const lineUSD = usd * item.qty;
-      totalUSD += lineUSD;
-      const div = document.createElement('div');
-      div.className = 'bag-item';
-      div.innerHTML = `
+    function renderBagInModal() {
+      const selectedCurrency = state.currency;
+      els.bagModalItems.innerHTML = '';
+      let totalUSD = 0;
+      state.bag.forEach(item => {
+        const product = state.products.find(p => p.id === item.id);
+        if (!product) return;
+        const base = state.rates.base || 'USD';
+        const rates = state.rates.rates || {};
+        let usd;
+        if (product.currency === 'USD') usd = product.basePrice;
+        else if (base === 'USD') {
+          const r = rates[product.currency]; usd = r ? (product.basePrice / r) : product.basePrice;
+        } else {
+          const rProd = rates[product.currency] || 1;
+          const rUSD = rates['USD'] || 1;
+          usd = product.basePrice / rProd * (1 / rUSD);
+        }
+        const lineUSD = usd * item.qty;
+        totalUSD += lineUSD;
+        const div = document.createElement('div');
+        div.className = 'bag-item';
+        div.innerHTML = `
         <img src="${product.image}" alt="${product.name}">
         <div>
           <div class="row-between">
@@ -657,62 +1123,62 @@
           <button data-inc="${item.id}">+</button>
         </div>
       `;
-      div.querySelector(`[data-remove="${item.id}"]`).addEventListener('click', () => {
-        removeFromBag(item.id);
-        renderBagInModal();
+        div.querySelector(`[data-remove="${item.id}"]`).addEventListener('click', () => {
+          removeFromBag(item.id);
+          renderBagInModal();
+        });
+        div.querySelector(`[data-dec="${item.id}"]`).addEventListener('click', () => {
+          changeQty(item.id, -1);
+          renderBagInModal();
+        });
+        div.querySelector(`[data-inc="${item.id}"]`).addEventListener('click', () => {
+          changeQty(item.id, +1);
+          renderBagInModal();
+        });
+        div.querySelector(`[data-qty="${item.id}"]`).addEventListener('change', (e) => {
+          setQty(item.id, parseInt(e.target.value || '1', 10));
+          renderBagInModal();
+        });
+        els.bagModalItems.appendChild(div);
       });
-      div.querySelector(`[data-dec="${item.id}"]`).addEventListener('click', () => {
-        changeQty(item.id, -1);
-        renderBagInModal();
+      const totalSelected = convertPrice(totalUSD, selectedCurrency);
+      els.bagModalTotal.textContent = formatCurrency(totalSelected, selectedCurrency);
+      els.bagCount.textContent = state.bag.reduce((a, b) => a + b.qty, 0);
+    }
+
+    function renderCheckoutPage() {
+      const selectedCurrency = state.currency;
+      let totalUSD = 0;
+      let itemsHTML = '';
+
+      // Ensure each bag item has a 'selected' flag (default: true for UX)
+      state.bag.forEach(item => {
+        if (typeof item.selected === 'undefined') item.selected = true;
       });
-      div.querySelector(`[data-inc="${item.id}"]`).addEventListener('click', () => {
-        changeQty(item.id, +1);
-        renderBagInModal();
-      });
-      div.querySelector(`[data-qty="${item.id}"]`).addEventListener('change', (e) => {
-        setQty(item.id, parseInt(e.target.value || '1', 10));
-        renderBagInModal();
-      });
-      els.bagModalItems.appendChild(div);
-    });
-    const totalSelected = convertPrice(totalUSD, selectedCurrency);
-    els.bagModalTotal.textContent = formatCurrency(totalSelected, selectedCurrency);
-    els.bagCount.textContent = state.bag.reduce((a,b)=>a+b.qty,0);
-  }
 
-  function renderCheckoutPage() {
-    const selectedCurrency = state.currency;
-    let totalUSD = 0;
-    let itemsHTML = '';
+      // Generate HTML with checkboxes
+      state.bag.forEach(item => {
+        const p = state.products.find(x => x.id === item.id);
+        if (!p) return;
 
-    // Ensure each bag item has a 'selected' flag (default: true for UX)
-    state.bag.forEach(item => {
-      if (typeof item.selected === 'undefined') item.selected = true;
-    });
+        const base = state.rates.base || 'USD';
+        const rates = state.rates.rates || {};
+        let usd;
+        if (p.currency === 'USD') usd = p.basePrice;
+        else if (base === 'USD') {
+          const r = rates[p.currency]; usd = r ? (p.basePrice / r) : p.basePrice;
+        } else {
+          const rProd = rates[p.currency] || 1;
+          const rUSD = rates['USD'] || 1;
+          usd = p.basePrice / rProd * (1 / rUSD);
+        }
+        const lineUSD = usd * item.qty;
 
-    // Generate HTML with checkboxes
-    state.bag.forEach(item => {
-      const p = state.products.find(x => x.id === item.id);
-      if (!p) return;
+        // Only add to total if selected
+        if (item.selected) totalUSD += lineUSD;
 
-      const base = state.rates.base || 'USD';
-      const rates = state.rates.rates || {};
-      let usd;
-      if (p.currency === 'USD') usd = p.basePrice;
-      else if (base === 'USD') {
-        const r = rates[p.currency]; usd = r ? (p.basePrice / r) : p.basePrice;
-      } else {
-        const rProd = rates[p.currency] || 1;
-        const rUSD = rates['USD'] || 1;
-        usd = p.basePrice / rProd * (1 / rUSD);
-      }
-      const lineUSD = usd * item.qty;
-
-      // Only add to total if selected
-      if (item.selected) totalUSD += lineUSD;
-
-      const isChecked = item.selected ? 'checked' : '';
-      itemsHTML += `
+        const isChecked = item.selected ? 'checked' : '';
+        itemsHTML += `
         <div style="display:flex; align-items:center; justify-content:space-between; padding:8px 0; gap:12px;">
           <label style="display:flex; align-items:center; gap:12px; cursor:pointer; flex:1;">
             <input type="checkbox" data-select="${item.id}" ${isChecked}>
@@ -721,10 +1187,10 @@
           <span>${formatCurrency(convertPrice(lineUSD, selectedCurrency), selectedCurrency)}</span>
         </div>
       `;
-    });
+      });
 
-    const totalSelected = convertPrice(totalUSD, selectedCurrency);
-    els.checkoutSummary.innerHTML = `
+      const totalSelected = convertPrice(totalUSD, selectedCurrency);
+      els.checkoutSummary.innerHTML = `
       <div style="margin-bottom:16px;">
         <h3>Order Summary</h3>
         ${itemsHTML || '<div class="muted">No items.</div>'}
@@ -738,383 +1204,443 @@
       </div>
     `;
 
-    // Attach checkbox event listeners
-    els.checkoutSummary.querySelectorAll('input[type="checkbox"]').forEach(cb => {
-      cb.addEventListener('change', (e) => {
-        const id = e.target.dataset.select;
-        const item = state.bag.find(x => x.id === id);
-        if (item) {
-          item.selected = e.target.checked;
-          renderCheckoutPage(); // Re-render to update total
+      // Attach checkbox event listeners
+      els.checkoutSummary.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+        cb.addEventListener('change', (e) => {
+          const id = e.target.dataset.select;
+          const item = state.bag.find(x => x.id === id);
+          if (item) {
+            item.selected = e.target.checked;
+            renderCheckoutPage(); // Re-render to update total
+          }
+        });
+      });
+    }
+
+    function renderEverything() {
+      renderCatalog();
+      renderHistory();
+      els.bagCount.textContent = state.bag.reduce((a, b) => a + b.qty, 0);
+    }
+
+    // ---- Filters ----
+    function applyFilters() {
+      const type = els.filterType.value;
+      const min = parseFloat(els.minPrice.value);
+      const max = parseFloat(els.maxPrice.value);
+      const selected = state.currency;
+      state.filtered = state.products.filter(p => {
+        if (type && p.type !== type) return false;
+        const price = priceInSelectedCurrency(p);
+        if (!Number.isNaN(min) && price < min) return false;
+        if (!Number.isNaN(max) && price > max) return false;
+        return true;
+      });
+      renderCatalog();
+    }
+
+    function clearFilters() {
+      els.filterType.value = '';
+      els.minPrice.value = '';
+      els.maxPrice.value = '';
+      state.filtered = state.products.slice();
+      renderCatalog();
+    }
+
+    // ---- Bag Operations ----
+    function addToBagById(productId, qty = 1) {
+      const p = state.products.find(x => x.id === productId);
+      if (!p) return;
+      const existing = state.bag.find(x => x.id === productId);
+      const currentQty = existing ? existing.qty : 0;
+      const newQty = Math.min(currentQty + qty, p.stock);
+      if (existing) existing.qty = newQty;
+      else state.bag.push({ id: productId, qty: Math.max(1, Math.min(qty, p.stock)) });
+      saveJSON('bag', state.bag);
+      els.bagCount.textContent = state.bag.reduce((a, b) => a + b.qty, 0);
+    }
+
+    function removeFromBag(productId) {
+      state.bag = state.bag.filter(x => x.id !== productId);
+      saveJSON('bag', state.bag);
+      els.bagCount.textContent = state.bag.reduce((a, b) => a + b.qty, 0);
+    }
+
+    function changeQty(productId, delta) {
+      const p = state.products.find(x => x.id === productId);
+      const item = state.bag.find(x => x.id === productId);
+      if (!p || !item) return;
+      item.qty = Math.max(1, Math.min(p.stock, item.qty + delta));
+      saveJSON('bag', state.bag);
+      els.bagCount.textContent = state.bag.reduce((a, b) => a + b.qty, 0);
+    }
+
+    function setQty(productId, qty) {
+      const p = state.products.find(x => x.id === productId);
+      const item = state.bag.find(x => x.id === productId);
+      if (!p || !item) return;
+      const q = Number.isNaN(qty) ? 1 : qty;
+      item.qty = Math.max(1, Math.min(p.stock, q));
+      saveJSON('bag', state.bag);
+      els.bagCount.textContent = state.bag.reduce((a, b) => a + b.qty, 0);
+    }
+
+    function clearBag() {
+      state.bag = [];
+      saveJSON('bag', state.bag);
+      els.bagCount.textContent = 0;
+    }
+
+    // ---- Modal ----
+    function openModal(productId) {
+      const p = state.products.find(x => x.id === productId);
+      if (!p) return;
+      modalProduct = p;
+      els.modalImg.src = p.image;
+      els.modalImg.alt = p.name;
+      els.modalType.textContent = p.type;
+      els.modalTitle.textContent = p.name;
+      els.modalDesc.textContent = p.description || '';
+      els.modalPrice.textContent = formatCurrency(priceInSelectedCurrency(p), state.currency);
+      els.modalStock.textContent = `${p.stock} in stock`;
+      els.qtyInput.value = 1;
+      els.modalBackdrop.classList.add('active');
+    }
+    function closeModal() {
+      els.modalBackdrop.classList.remove('active');
+      modalProduct = null;
+    }
+
+    // ---- Keep-Alive ----
+    async function startKeepAlive() {
+      if (state.startedKeepAlive) return;
+      state.startedKeepAlive = true;
+      els.indicator.classList.remove('hidden');
+      setIndicator('wait', 'Backend: connecting…');
+      const controller = new AbortController();
+      const to = setTimeout(() => controller.abort(), 60000);
+      try {
+        const res = await fetch('/api/keep-alive', { signal: controller.signal });
+        clearTimeout(to);
+        if (!res.ok) throw new Error('Backend error');
+        const data = await res.json();
+        state.keepAliveOk = true;
+        setIndicator('ok', `Backend: warm (${data.latencyMs}ms)`);
+        state.keepAliveTimer = setInterval(async () => {
+          try {
+            const t0 = performance.now();
+            const r = await fetch('/api/keep-alive');
+            if (r.ok) {
+              const dt = Math.round(performance.now() - t0);
+              if (state.keepAliveOk) setIndicator('ok', `Backend: warm (${dt}ms)`);
+            }
+          } catch { }
+        }, 120000);
+      } catch (e) {
+        setIndicator('off', 'Backend: not reachable');
+      }
+    }
+
+    function setIndicator(status, text) {
+      els.indicatorDot.classList.remove('ok', 'wait', 'off');
+      els.indicatorDot.classList.add(status);
+      els.indicatorText.textContent = text;
+    }
+
+    // ---- Events ----
+    els.applyFilters.addEventListener('click', applyFilters);
+    els.clearFilters.addEventListener('click', clearFilters);
+    els.sortBy.addEventListener('change', renderCatalog);
+    els.layout.addEventListener('change', () => {
+      state.layout = els.layout.value;
+      saveJSON('layout', state.layout);
+      renderCatalog();
+    });
+    els.currency.addEventListener('change', () => {
+      state.currency = els.currency.value;
+      saveJSON('currency', state.currency);
+      renderEverything();
+    }); //
+    els.refreshRates.addEventListener('click', loadRates);
+    els.startKeepAlive.addEventListener('click', startKeepAlive);
+    // Sync awselect UI changes back to app state
+    function bindAwselectHandlers() {
+      // Currency
+      $('#awselect_currency .back_face a').on('click', function () {
+        const value = $(this).text()
+        console.log("currency value: ", value);
+        state.currency = value;
+        els.currency.value = value;
+        saveJSON('currency', state.currency);
+        renderEverything();
+      });
+
+      // Layout
+      $('#awselect_layout .back_face a').on('click', function () {
+        const value = $(this).text()
+        console.log("layout value: ", value);
+        state.layout = value;
+        saveJSON('layout', state.layout);
+        renderCatalog(); // layout only affects catalog
+      });
+
+      // Sort
+      $('#awselect_sortBy .back_face a').on('click', function () {
+        const value = $(this).text()
+        console.log("sort value: ", value);
+        els.sortBy.value = value; // optional: keep native select in sync
+        renderCatalog();
+      });
+
+      // Filter Type
+      $('#awselect_filterType .back_face a').on('click', function () {
+        const value = $(this).text()
+        console.log("filter type value: ", value);
+        els.filterType.value = value; // optional
+        applyFilters();
+        renderCatalog();
+      });
+    }
+
+    // Product Modal
+    els.closeModal.addEventListener('click', closeModal);
+    els.modalBackdrop.addEventListener('click', (e) => { if (e.target === els.modalBackdrop) closeModal(); });
+    els.qtyDec.addEventListener('click', () => {
+      const v = Math.max(1, parseInt(els.qtyInput.value || '1', 10) - 1);
+      els.qtyInput.value = v;
+    });
+    els.qtyInc.addEventListener('click', () => {
+      const v = Math.max(1, parseInt(els.qtyInput.value || '1', 10) + 1);
+      els.qtyInput.value = v;
+    });
+    els.addToBag.addEventListener('click', () => {
+      if (!modalProduct) return;
+      const qty = Math.max(1, parseInt(els.qtyInput.value || '1', 10));
+      addToBagById(modalProduct.id, qty);
+      closeModal();
+    });
+
+    // Bag Modal
+    els.openBag.addEventListener('click', () => {
+      renderBagInModal();
+      els.bagModalBackdrop.classList.add('active');
+    });
+    els.closeBagModal.addEventListener('click', () => {
+      els.bagModalBackdrop.classList.remove('active');
+    });
+    els.bagModalBackdrop.addEventListener('click', (e) => {
+      if (e.target === els.bagModalBackdrop) {
+        els.bagModalBackdrop.classList.remove('active');
+      }
+    });
+    els.clearBagInModal.addEventListener('click', () => {
+      clearBag();
+      renderBagInModal();
+    });
+    els.goToCheckout.addEventListener('click', () => {
+      if (state.bag.length === 0) {
+        alert('Your bag is empty.');
+        return;
+      }
+      // Close the bag modal first before proceeding
+      els.bagModalBackdrop.classList.remove('active');
+      window.location.hash = 'checkout';
+    });
+
+    // Checkout Page
+    els.backToShop.addEventListener('click', () => {
+      window.location.hash = '';
+    });
+
+    els.confirmPurchase.addEventListener('click', async () => {
+      // Filter only SELECTED items
+      const selectedItems = state.bag.filter(item => item.selected);
+      if (selectedItems.length === 0) {
+        alert('No items selected for purchase.');
+        return;
+      }
+
+      const items = selectedItems.map(b => {
+        const p = state.products.find(x => x.id === b.id);
+        return { id: p.id, name: p.name, qty: b.qty };
+      });
+
+      // Compute total USD for selected items only
+      let totalUSD = 0;
+      selectedItems.forEach(item => {
+        const p = state.products.find(x => x.id === item.id);
+        if (!p) return;
+        const base = state.rates.base || 'USD';
+        const rates = state.rates.rates || {};
+        let usd;
+        if (p.currency === 'USD') usd = p.basePrice;
+        else if (base === 'USD') {
+          const r = rates[p.currency]; usd = r ? (p.basePrice / r) : p.basePrice;
+        } else {
+          const rProd = rates[p.currency] || 1;
+          const rUSD = rates['USD'] || 1;
+          usd = p.basePrice / rProd * (1 / rUSD);
         }
+        totalUSD += usd * item.qty;
+      });
+
+      const totalSelected = convertPrice(totalUSD, state.currency);
+
+      try {
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 15000);
+        const res = await fetch('/api/purchase', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ items, currency: state.currency, total: Number(totalSelected.toFixed(2)) }),
+          signal: controller.signal
+        });
+        clearTimeout(timeout);
+        if (!res.ok) throw new Error('Purchase failed');
+        const data = await res.json();
+
+        // Add to history
+        state.history.push({
+          date: new Date().toISOString(),
+          items,
+          total: Number(totalSelected.toFixed(2)),
+          currency: state.currency,
+          backend: { success: data.success, purchaseId: data.purchaseId }
+        });
+        saveJSON('history', state.history);
+
+        // Update product stock
+        selectedItems.forEach(b => {
+          const p = state.products.find(x => x.id === b.id);
+          if (p) p.stock = Math.max(0, p.stock - b.qty);
+        });
+
+        // REMOVE ONLY SELECTED ITEMS FROM BAG
+        state.bag = state.bag.filter(item => !item.selected);
+        saveJSON('bag', state.bag);
+
+        renderEverything();
+        window.location.hash = '';
+        alert('✅ Purchase completed! Order ID: ' + data.purchaseId);
+      } catch (e) {
+        alert('❌ Purchase failed: ' + (e.message || 'Unknown error'));
+      }
+    });
+    // ---- Init ----
+    document.addEventListener('DOMContentLoaded', () => {
+      const loadingScreen = document.getElementById('loadingScreen');
+      const startButton = document.getElementById('startButton');
+      const loader = document.getElementById('loader');
+      const app = document.querySelector('.app');
+
+      // Start button click handler
+      startButton.addEventListener('click', () => {
+        // Hide button, show loader
+        startButton.style.opacity = '0';
+        startButton.style.transform = 'scale(0.95)';
+        startButton.style.pointerEvents = 'none';
+
+        setTimeout(() => {
+          loader.style.display = 'inline-block';
+          setTimeout(() => {
+            loader.style.opacity = '1';
+
+            // After delay, hide loading screen
+            setTimeout(() => {
+              loadingScreen.style.transform = 'translateY(-100%)';
+              loadingScreen.style.opacity = '0';
+
+              // Show main app
+              setTimeout(() => {
+                app.classList.add('visible');
+
+                // Initialize app after loading
+                initApp();
+
+                // Animate content sections
+                setTimeout(() => {
+                  document.querySelectorAll('.content > *').forEach((el, i) => {
+                    setTimeout(() => {
+                      el.classList.add('content-fade', 'active');
+                    }, 200 + (i * 100));
+                  });
+                }, 300);
+              }, 500);
+            }, 800);
+          }, 300);
+        }, 200);
       });
     });
-  }
 
-  function renderEverything(){
-    renderCatalog();
-    renderHistory();
-    els.bagCount.textContent = state.bag.reduce((a,b)=>a+b.qty,0);
-  }
+    // New initApp function that contains your current initialization logic
+    async function initApp() {
+      els.currency.value = state.currency;
+      els.layout.value = state.layout;
 
-  // ---- Filters ----
-  function applyFilters(){
-    const type = els.filterType.value;
-    const min = parseFloat(els.minPrice.value);
-    const max = parseFloat(els.maxPrice.value);
-    const selected = state.currency;
-    state.filtered = state.products.filter(p => {
-      if(type && p.type !== type) return false;
-      const price = priceInSelectedCurrency(p);
-      if(!Number.isNaN(min) && price < min) return false;
-      if(!Number.isNaN(max) && price > max) return false;
-      return true;
-    });
-    renderCatalog();
-  }
+      await Promise.all([loadProducts(), loadRates()]);
+      renderEverything();
 
-  function clearFilters(){
-    els.filterType.value = '';
-    els.minPrice.value = '';
-    els.maxPrice.value = '';
-    state.filtered = state.products.slice();
-    renderCatalog();
-  }
+      function handleRoute() {
+        // Fade out current content
+        document.querySelectorAll('.content-fade').forEach(el => {
+          el.classList.remove('active');
+        });
 
-  // ---- Bag Operations ----
-  function addToBagById(productId, qty=1){
-    const p = state.products.find(x => x.id === productId);
-    if(!p) return;
-    const existing = state.bag.find(x => x.id === productId);
-    const currentQty = existing ? existing.qty : 0;
-    const newQty = Math.min(currentQty + qty, p.stock);
-    if(existing) existing.qty = newQty;
-    else state.bag.push({ id: productId, qty: Math.max(1, Math.min(qty, p.stock)) });
-    saveJSON('bag', state.bag);
-    els.bagCount.textContent = state.bag.reduce((a,b)=>a+b.qty,0);
-  }
+        setTimeout(() => {
+          const hash = window.location.hash.slice(1);
+          const content = document.querySelector('.content');
+          const [filtersPanel, catalogPanel, checkoutPage] = content.children;
 
-  function removeFromBag(productId){
-    state.bag = state.bag.filter(x => x.id !== productId);
-    saveJSON('bag', state.bag);
-    els.bagCount.textContent = state.bag.reduce((a,b)=>a+b.qty,0);
-  }
-
-  function changeQty(productId, delta){
-    const p = state.products.find(x => x.id === productId);
-    const item = state.bag.find(x => x.id === productId);
-    if(!p || !item) return;
-    item.qty = Math.max(1, Math.min(p.stock, item.qty + delta));
-    saveJSON('bag', state.bag);
-    els.bagCount.textContent = state.bag.reduce((a,b)=>a+b.qty,0);
-  }
-
-  function setQty(productId, qty){
-    const p = state.products.find(x => x.id === productId);
-    const item = state.bag.find(x => x.id === productId);
-    if(!p || !item) return;
-    const q = Number.isNaN(qty) ? 1 : qty;
-    item.qty = Math.max(1, Math.min(p.stock, q));
-    saveJSON('bag', state.bag);
-    els.bagCount.textContent = state.bag.reduce((a,b)=>a+b.qty,0);
-  }
-
-  function clearBag(){
-    state.bag = [];
-    saveJSON('bag', state.bag);
-    els.bagCount.textContent = 0;
-  }
-
-  // ---- Modal ----
-  function openModal(productId){
-    const p = state.products.find(x => x.id === productId);
-    if(!p) return;
-    modalProduct = p;
-    els.modalImg.src = p.image;
-    els.modalImg.alt = p.name;
-    els.modalType.textContent = p.type;
-    els.modalTitle.textContent = p.name;
-    els.modalDesc.textContent = p.description || '';
-    els.modalPrice.textContent = formatCurrency(priceInSelectedCurrency(p), state.currency);
-    els.modalStock.textContent = `${p.stock} in stock`;
-    els.qtyInput.value = 1;
-    els.modalBackdrop.classList.add('active');
-  }
-  function closeModal(){
-    els.modalBackdrop.classList.remove('active');
-    modalProduct = null;
-  }
-
-  // ---- Keep-Alive ----
-  async function startKeepAlive(){
-    if(state.startedKeepAlive) return;
-    state.startedKeepAlive = true;
-    els.indicator.classList.remove('hidden');
-    setIndicator('wait', 'Backend: connecting…');
-    const controller = new AbortController();
-    const to = setTimeout(() => controller.abort(), 60000);
-    try{
-      const res = await fetch('/api/keep-alive', { signal: controller.signal });
-      clearTimeout(to);
-      if(!res.ok) throw new Error('Backend error');
-      const data = await res.json();
-      state.keepAliveOk = true;
-      setIndicator('ok', `Backend: warm (${data.latencyMs}ms)`);
-      state.keepAliveTimer = setInterval(async () => {
-        try{
-          const t0 = performance.now();
-          const r = await fetch('/api/keep-alive');
-          if(r.ok){
-            const dt = Math.round(performance.now() - t0);
-            if(state.keepAliveOk) setIndicator('ok', `Backend: warm (${dt}ms)`);
+          if (hash === 'checkout') {
+            if (state.bag.length === 0) {
+              window.location.hash = '';
+              return;
+            }
+            // Reset selection
+            state.bag.forEach(item => item.selected = true);
+            // Hide filters and catalog
+            filtersPanel.style.display = 'none';
+            catalogPanel.style.display = 'none';
+            // Show checkout page (already has grid-column: 1 / -1)
+            els.checkoutPage.style.display = 'block';
+            renderCheckoutPage();
+          } else {
+            // Show filters and catalog
+            filtersPanel.style.display = '';
+            catalogPanel.style.display = '';
+            // Hide checkout
+            els.checkoutPage.style.display = 'none';
           }
-        }catch{}
-      }, 120000);
-    }catch(e){
-      setIndicator('off', 'Backend: not reachable');
+
+          // Fade in new content
+          setTimeout(() => {
+            document.querySelectorAll('.content > *:not([style*="display: none"])').forEach(el => {
+              el.classList.add('content-fade', 'active');
+            });
+          }, 100);
+        }, 400);
+      }
+
+      handleRoute();
+      window.addEventListener('hashchange', handleRoute);
+
+      // Uncomment if using awselect
+      // $(document).ready(function(){ 
+      //   $('select').awselect({
+      //     background: "#121935",
+      //     active_background: "#1a2245",
+      //     placeholder_color: "#95a3b3",
+      //     placeholder_active_color: "#cbd5e1",
+      //     option_color: "#e7ecf3",
+      //     vertical_padding: "0",
+      //     horizontal_padding: "10px",
+      //     immersive: false,
+      //     height: "fit-content"
+      //   });
+      //   bindAwselectHandlers();
+      // });
     }
-  }
-
-  function setIndicator(status, text){
-    els.indicatorDot.classList.remove('ok','wait','off');
-    els.indicatorDot.classList.add(status);
-    els.indicatorText.textContent = text;
-  }
-
-  // ---- Events ----
-  els.applyFilters.addEventListener('click', applyFilters);
-  els.clearFilters.addEventListener('click', clearFilters);
-  els.sortBy.addEventListener('change', renderCatalog);
-  els.layout.addEventListener('change', () => {
-    state.layout = els.layout.value;
-    saveJSON('layout', state.layout);
-    renderCatalog();
-  });
-  els.currency.addEventListener('change', () => {
-    state.currency = els.currency.value;
-    saveJSON('currency', state.currency);
-    renderEverything();
-  }); //
-  els.refreshRates.addEventListener('click', loadRates);
-  els.startKeepAlive.addEventListener('click', startKeepAlive);
-  // Sync awselect UI changes back to app state
-function bindAwselectHandlers() {
-  // Currency
-  $('#awselect_currency .back_face a').on('click', function() {
-    const value = $(this).text()
-    console.log("currency value: ", value);
-    state.currency = value;
-    els.currency.value = value;
-    saveJSON('currency', state.currency);
-    renderEverything();
-  });
-
-  // Layout
-  $('#awselect_layout .back_face a').on('click', function() {
-    const value = $(this).text()
-    console.log("layout value: ", value);
-    state.layout = value;
-    saveJSON('layout', state.layout);
-    renderCatalog(); // layout only affects catalog
-  });
-
-  // Sort
-  $('#awselect_sortBy .back_face a').on('click', function() {
-    const value = $(this).text() 
-    console.log("sort value: ", value);
-    els.sortBy.value = value; // optional: keep native select in sync
-    renderCatalog();
-  });
-
-  // Filter Type
-  $('#awselect_filterType .back_face a').on('click', function() {
-    const value = $(this).text()
-    console.log("filter type value: ", value);
-    els.filterType.value = value; // optional
-    applyFilters();
-    renderCatalog();
-  });
-}
-
-  // Product Modal
-  els.closeModal.addEventListener('click', closeModal);
-  els.modalBackdrop.addEventListener('click', (e) => { if(e.target === els.modalBackdrop) closeModal(); });
-  els.qtyDec.addEventListener('click', () => {
-    const v = Math.max(1, parseInt(els.qtyInput.value || '1', 10) - 1);
-    els.qtyInput.value = v;
-  });
-  els.qtyInc.addEventListener('click', () => {
-    const v = Math.max(1, parseInt(els.qtyInput.value || '1', 10) + 1);
-    els.qtyInput.value = v;
-  });
-  els.addToBag.addEventListener('click', () => {
-    if(!modalProduct) return;
-    const qty = Math.max(1, parseInt(els.qtyInput.value || '1', 10));
-    addToBagById(modalProduct.id, qty);
-    closeModal();
-  });
-
-  // Bag Modal
-  els.openBag.addEventListener('click', () => {
-    renderBagInModal();
-    els.bagModalBackdrop.classList.add('active');
-  });
-  els.closeBagModal.addEventListener('click', () => {
-    els.bagModalBackdrop.classList.remove('active');
-  });
-  els.bagModalBackdrop.addEventListener('click', (e) => {
-    if(e.target === els.bagModalBackdrop) {
-    els.bagModalBackdrop.classList.remove('active');
-  }
-  });
-  els.clearBagInModal.addEventListener('click', () => {
-    clearBag();
-    renderBagInModal();
-  });
-  els.goToCheckout.addEventListener('click', () => {
-    if(state.bag.length === 0) {
-      alert('Your bag is empty.');
-      return;
-    }
-    els.bagModalBackdrop.style.display = 'none';
-    window.location.hash = 'checkout';
-  });
-
-  // Checkout Page
-  els.backToShop.addEventListener('click', () => {
-    window.location.hash = '';
-  });
-
-els.confirmPurchase.addEventListener('click', async () => {
-  // Filter only SELECTED items
-  const selectedItems = state.bag.filter(item => item.selected);
-  if (selectedItems.length === 0) {
-    alert('No items selected for purchase.');
-    return;
-  }
-
-  const items = selectedItems.map(b => {
-    const p = state.products.find(x => x.id === b.id);
-    return { id: p.id, name: p.name, qty: b.qty };
-  });
-
-  // Compute total USD for selected items only
-  let totalUSD = 0;
-  selectedItems.forEach(item => {
-    const p = state.products.find(x => x.id === item.id);
-    if (!p) return;
-    const base = state.rates.base || 'USD';
-    const rates = state.rates.rates || {};
-    let usd;
-    if (p.currency === 'USD') usd = p.basePrice;
-    else if (base === 'USD') {
-      const r = rates[p.currency]; usd = r ? (p.basePrice / r) : p.basePrice;
-    } else {
-      const rProd = rates[p.currency] || 1;
-      const rUSD = rates['USD'] || 1;
-      usd = p.basePrice / rProd * (1 / rUSD);
-    }
-    totalUSD += usd * item.qty;
-  });
-
-  const totalSelected = convertPrice(totalUSD, state.currency);
-
-  try {
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 15000);
-    const res = await fetch('/api/purchase', {
-      method: 'POST',
-      headers: { 'Content-Type':'application/json' },
-      body: JSON.stringify({ items, currency: state.currency, total: Number(totalSelected.toFixed(2)) }),
-      signal: controller.signal
-    });
-    clearTimeout(timeout);
-    if (!res.ok) throw new Error('Purchase failed');
-    const data = await res.json();
-
-    // Add to history
-    state.history.push({
-      date: new Date().toISOString(),
-      items,
-      total: Number(totalSelected.toFixed(2)),
-      currency: state.currency,
-      backend: { success: data.success, purchaseId: data.purchaseId }
-    });
-    saveJSON('history', state.history);
-
-    // Update product stock
-    selectedItems.forEach(b => {
-      const p = state.products.find(x => x.id === b.id);
-      if (p) p.stock = Math.max(0, p.stock - b.qty);
-    });
-
-    // REMOVE ONLY SELECTED ITEMS FROM BAG
-    state.bag = state.bag.filter(item => !item.selected);
-    saveJSON('bag', state.bag);
-
-    renderEverything();
-    window.location.hash = '';
-    alert('✅ Purchase completed! Order ID: ' + data.purchaseId);
-  } catch (e) {
-    alert('❌ Purchase failed: ' + (e.message || 'Unknown error'));
-  }
-});
-  // ---- Init ----
-  (async function init(){
-    els.currency.value = state.currency;
-    els.layout.value = state.layout;
-    await Promise.all([loadProducts(), loadRates()]);
-    renderEverything();
-
-    function handleRoute() {
-  const hash = window.location.hash.slice(1);
-  const content = document.querySelector('.content');
-  const [filtersPanel, catalogPanel, checkoutPage] = content.children;
-
-  if (hash === 'checkout') {
-    if (state.bag.length === 0) {
-      window.location.hash = '';
-      return;
-    }
-    // Reset selection
-    state.bag.forEach(item => item.selected = true);
-
-    // Hide filters and catalog
-    filtersPanel.style.display = 'none';
-    catalogPanel.style.display = 'none';
-
-    // Show checkout page (already has grid-column: 1 / -1)
-    els.checkoutPage.style.display = 'block';
-
-    renderCheckoutPage();
-  } else {
-    // Show filters and catalog
-    filtersPanel.style.display = '';
-    catalogPanel.style.display = '';
-
-    // Hide checkout
-    els.checkoutPage.style.display = 'none';
-  }
-}
-
-    handleRoute();
-    window.addEventListener('hashchange', handleRoute);
-
-    // $(document).ready(function(){ 
-    //   $('select').awselect({
-    //     background: "#121935",                 // matches --card
-    //     active_background: "#1a2245",          // slightly brighter card
-    //     placeholder_color: "#95a3b3",          // matches --muted
-    //     placeholder_active_color: "#cbd5e1",   // matches filter header text
-    //     option_color: "#e7ecf3",               // matches --text (white-ish)
-    //     vertical_padding: "0",
-    //     horizontal_padding: "10px",
-    //     immersive: false,
-    //     height: "fit-content"
-    //   });
-    //   bindAwselectHandlers()
-    // });
-  })();
-</script>
+  </script>
 </body>
+
 </html>
